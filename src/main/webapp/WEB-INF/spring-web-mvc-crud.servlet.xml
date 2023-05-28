@@ -24,25 +24,25 @@
         <property name="minPoolSize" value="10"/>
         <property name="maxPoolSize" value="50"/>
     </bean>
+    <!--
+       <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+           <property name="dataSource" ref="dataSource"/>
+           <property name="hibernateProperties">
+               <props>
+                   <prop key="hbm2ddl.auto">update</prop>
+                   <prop key="show_sql">true</prop>
+                   <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                   <prop key="format_sql">true</prop>
+               </props>
+           </property>
+           <property name="packagesToScan" value="com.devstack.app.entity"/>
+       </bean>
 
-    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
-        <property name="hibernateProperties">
-            <props>
-                <prop key="hbm2ddl.auto">update</prop>
-                <prop key="show_sql">true</prop>
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
-                <prop key="format_sql">true</prop>
-            </props>
-        </property>
-        <property name="packagesToScan" value="com.devstack.app.entity"/>
-    </bean>
-
-    <bean id="transactionProvider" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
-        <property name="sessionFactory" ref="sessionFactory"/>
-        <tx:annotation-driven transaction-manager="transactionManager"/>
-    </bean>
-
+         <bean id="transactionProvider" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+             <property name="sessionFactory" ref="sessionFactory"/>
+             <tx:annotation-driven transaction-manager="transactionManager"/>
+         </bean>
+     -->
 
 
 </beans>

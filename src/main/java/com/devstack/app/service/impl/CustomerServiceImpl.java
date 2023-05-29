@@ -5,6 +5,7 @@ import com.devstack.app.entity.Customer;
 import com.devstack.app.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 /*@component=>controller,repository,service*/
@@ -15,6 +16,7 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerDao customerDao;
 
     @Override
+    @Transactional
     public List<Customer> findAllCustomers() {
         return customerDao.findAllCustomers();
     }

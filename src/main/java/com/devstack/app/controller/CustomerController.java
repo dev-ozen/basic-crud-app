@@ -23,4 +23,9 @@ public class CustomerController {
         model.addAttribute("customers",list);
         return "all-customers";
     }
+
+    @GetMapping("/new-customer-form")/*GET,POST,PUT,DELETE*/
+    public String newCustomerFormLoader(){
+        return "new-customer-form";
+    }
 }

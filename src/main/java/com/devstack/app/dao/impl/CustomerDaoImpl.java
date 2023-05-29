@@ -19,7 +19,6 @@ public class CustomerDaoImpl implements CustomerDao {
     private SessionFactory sessionFactory;
 
     @Override
-    @Transactional
     public List<Customer> findAllCustomers() {
         return sessionFactory.getCurrentSession()
                 .createQuery("FROM Customer", Customer.class).getResultList();

@@ -25,7 +25,9 @@ public class CustomerController {
     }
 
     @GetMapping("/new-customer-form")/*GET,POST,PUT,DELETE*/
-    public String newCustomerFormLoader(){
+    public String newCustomerFormLoader(Model model){
+        Customer customer = new Customer();
+        model.addAttribute("customer",customer);
         return "new-customer-form";
     }
 }

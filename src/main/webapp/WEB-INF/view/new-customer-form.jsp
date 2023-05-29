@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<form:form action="createCustomer" modelAttribute="customer">
+<form:form action="customers/new-customer" modelAttribute="customer" method="post">
     <div class="form-group">
         <label for="name">Customer Name</label>
         <form:input path="name" id="name"/>

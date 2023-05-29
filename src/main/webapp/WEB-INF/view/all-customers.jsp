@@ -16,7 +16,7 @@
 </head>
 <body>
 <hr>
-<a href="customers/new-customer-form" class="btn btn-submit btn-sm">
+<a href="new-customer-form" class="btn btn-submit btn-sm">
     + New Customer</a>
 <hr>
 <div class="container">

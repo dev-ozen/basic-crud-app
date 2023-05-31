@@ -28,7 +28,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer findCustomer(int id) {
+    @Transactional
+    public Customer findCustomer(long id) {
         return customerDao.findCustomer(id);
     }
 }

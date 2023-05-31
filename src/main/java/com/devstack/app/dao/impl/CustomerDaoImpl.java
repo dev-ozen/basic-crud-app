@@ -30,7 +30,7 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
-    public Customer findCustomer(int id) {
+    public Customer findCustomer(long id) {
         return sessionFactory.getCurrentSession().find(Customer.class,id);
     }
 }

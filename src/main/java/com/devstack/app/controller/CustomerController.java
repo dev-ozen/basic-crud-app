@@ -37,7 +37,7 @@ public class CustomerController {
     }
 
     @GetMapping("/update-ui-form")
-    public String updateUiForm(@RequestParam("id") int id, Model model){
+    public String updateUiForm(@RequestParam("id") long id, Model model){
         Customer customer = customerService.findCustomer(id);
         model.addAttribute("customer",customer);
         return "new-customer-form";

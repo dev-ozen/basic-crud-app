@@ -34,7 +34,7 @@
         <c:forEach var="cus" items="${customers}">
 
             <c:url var="update" value="/customers/update-ui-form">
-                <c:param  name="id" value="cus.id"/>
+                <c:param  name="id" value="${cus.id}"/>
             </c:url>
 
             <tr>

@@ -33,4 +33,10 @@ public class CustomerDaoImpl implements CustomerDao {
     public Customer findCustomer(long id) {
         return sessionFactory.getCurrentSession().find(Customer.class,id);
     }
+
+    @Override
+    public void deleteCustomer(long id) {
+        sessionFactory.getCurrentSession()
+                .delete(sessionFactory.getCurrentSession().find(Customer.class,id));
+    }
 }

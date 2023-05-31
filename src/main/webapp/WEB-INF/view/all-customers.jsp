@@ -37,12 +37,17 @@
                 <c:param  name="id" value="${cus.id}"/>
             </c:url>
 
+            <c:url var="delete" value="/customers/delete-ui-form">
+                <c:param  name="id" value="${cus.id}"/>
+            </c:url>
+
             <tr>
                 <td>${cus.id}</td>
                 <td>${cus.name}</td>
                 <td>${cus.salary}</td>
                 <td>
-                    <a href="${update}">Update Customer</a>
+                    <a href="${update}">Update Customer</a>&nbsp; | &nbsp;
+                    <a href="${delete}">Delete Customer</a>
                 </td>
             </tr>
         </c:forEach>

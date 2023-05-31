@@ -43,4 +43,10 @@ public class CustomerController {
         return "new-customer-form";
     }
 
+    @GetMapping("/delete-ui-form")
+    public String deleteUiForm(@RequestParam("id") long id){
+        customerService.deleteCustomer(id);
+        return "redirect:/customers/all";
+    }
+
 }
